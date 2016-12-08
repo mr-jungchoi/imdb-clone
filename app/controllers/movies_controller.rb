@@ -4,7 +4,7 @@ class MoviesController < ApplicationController
 
   def show
     search_keyword = params[:search]
-    youtube_response = open(youtube_url + search_keyword + youtube_token).read
+    youtube_response = open(youtube_url + search_keyword + trailer_search(search_keyword) + youtube_token).read
     omdb_response = open(omdb_url + search_keyword).read
 
     @movie = Movie.parse(youtube_response, omdb_response)
@@ -17,10 +17,14 @@ class MoviesController < ApplicationController
   end
 
   def youtube_url
-    "https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCi8e0iOVk1fEOogdfu4YgfA&q="
+    "https://www.googleapis.com/youtube/v3/search?part=snippet&q="
   end
 
   def omdb_url
     "http://www.omdbapi.com/?y=&plot=short&r=json&t="
+  end
+
+  def trailer_search(movie_name)
+    "#{movie_name}+trailer"
   end
 end
