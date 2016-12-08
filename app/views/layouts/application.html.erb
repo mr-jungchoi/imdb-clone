@@ -12,6 +12,10 @@
     <nav>
       <a href='/'>Home</a>
     </nav>
+    <form id='randomize' action="/movies/show">
+      <input type='text' name='search' placeholder='Movie Title'>
+      <input type='submit' value="Search">
+    </form>
     <h1>IMDb Clone</h1>
     <%= yield %>
   </body>

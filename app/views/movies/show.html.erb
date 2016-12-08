@@ -1,0 +1,10 @@
+<h2><%= @movie.title %></h2>
+
+<iframe id="player" type="text/html"
+        width="640" height="390"
+        src="https://www.youtube.com/embed/<%= @movie.youtube_trailer_id %>"
+        frameborder="0"
+        style="border: solid 4px #37474F"
+></iframe>
+
+<%= render 'movies/movie', layout: false %>
