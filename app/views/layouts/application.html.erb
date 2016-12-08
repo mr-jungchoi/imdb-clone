@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ImdbClone</title>
+    <title>IMDb Clone</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
@@ -9,6 +9,10 @@
   </head>
 
   <body>
+    <nav>
+      <a href='/'>Home</a>
+    </nav>
+    <h1>IMDb Clone</h1>
     <%= yield %>
   </body>
 </html>
