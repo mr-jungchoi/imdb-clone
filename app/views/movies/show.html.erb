@@ -1,9 +1,11 @@
-<h2><%= @movie.title %></h2>
+<%= render_component('MovieView', {prerender: true})%>
 
-<iframe id="player" type="text/html"
+<!-- <h2><%= @movie.title %></h2> -->
+
+<!-- <iframe id="player" type="text/html"
         width="1000" height="560"
         src="https://www.youtube.com/embed/<%= @movie.youtube_trailer_id %>"
         frameborder="0"
 ></iframe>
 
-<%= render 'movies/movie', layout: false %>
+<%= render 'movies/movie', layout: false %> -->
