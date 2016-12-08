@@ -1,5 +1,8 @@
 <h2>Movie Stuff</h2>
 
-Movie stuff is going to go here
-
-<div id="player"></div>
+<iframe id="player" type="text/html"
+        width="640" height="390"
+        src="https://www.youtube.com/embed/<%= @movie.youtube_trailer_id %>"
+        frameborder="0"
+        style="border: solid 4px #37474F"
+></iframe>
